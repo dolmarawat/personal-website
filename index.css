@@ -1,8 +1,7 @@
-body{
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    color: #333;
+#skills,#experience{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(182, 227, 110);
+    font-size: 16px;
 }
-
