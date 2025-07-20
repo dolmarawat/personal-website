@@ -1,0 +1,43 @@
+<!-- Fixed and borderless header -->
+<header class="bg-light-subtle shadow-sm" style="position: fixed; width: 100%; top: 0; z-index: 1030;">
+  <div class="card-body text-center py-3">
+    <h1 class="card-title mb-0" style="font-family: Georgia;">Dolma Rawat</h1>
+    <p style="font-size: 20px; font-family: Georgia;">Bridging Data Science, Ethical AI, and Public Policy</p>
+  </div>
+
+  <nav class="navbar navbar-expand bg-light-subtle border-0 pt-0 pb-3" style="font-family: Georgia;">
+    <div class="container justify-content-center">
+      <ul class="nav">
+        <li class="nav-item mx-3">
+          <a class="nav-link text-dark" href="home.html" style="font-size: 20px;">About</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link text-dark" href="cv.html" style="font-size: 20px;">CV</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link text-dark" href="research.html" style="font-size: 20px;">Research</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link text-dark" href="media.html" style="font-size: 20px;">Media</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link text-dark" href="testimonial.html" style="font-size: 20px;">Testimonials</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Get current page filename (e.g., "cv.html")
+  const currentPage = window.location.pathname.split("/").pop();
+
+  // Find all nav links and highlight the one that matches the current URL
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const linkPage = link.getAttribute('href');
+    if (linkPage === currentPage) {
+      link.classList.add('active-page');
+    }
+  });
+</script>
+

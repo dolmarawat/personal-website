@@ -1,3 +1,103 @@
-.nav-links{
-    font-size: large;
+/* index.css */
+
+/* Global styles */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f2f4f7;
+  margin: 0;
+  padding: 0;
+  padding-top: 220px; /* adjust based on actual header height */
 }
+
+/* Container tweaks */
+.container {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0);
+}
+
+/* Card image container - 40% */
+.image-card {
+  flex: 0 0 40%;
+  padding:2rem;
+}
+
+.image-card img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: none;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-card img:hover {
+  transform: scale(1.03);
+}
+
+/* Text card container - 60% */
+.text-card {
+  flex: 0 0 60%;
+  padding-left: 1rem;
+}
+
+.text-card .card {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.card-header {
+  font-size: 1.8rem;
+  background-color: #f2f4f7;
+  font-weight: 600;
+  background-color: transparent;
+  border-bottom: none;
+  margin-bottom: 1rem;
+  padding: 2rem;
+}
+
+.card-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #101110;
+  padding: 2rem;
+  background-color: #f2f4f7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .row.flex-row {
+    flex-direction: column;
+  }
+
+  .image-card,
+  .text-card {
+    flex: 100%;
+    padding:0;
+  }
+
+  .image-card {
+    margin-bottom: 2rem;
+  }
+}
+
+/* footer  */
+/* Footer hover effect */
+.footer-link {
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #0d6efd; /* Bootstrap primary blue */
+  text-decoration: underline;
+}
+
+
+.nav-link.active-page {
+  color: rgb(12, 122, 75) !important;
+  font-weight: bold;
+  border-bottom: 2px solid rgb(84, 213, 19);
+}
+

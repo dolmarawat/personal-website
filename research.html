@@ -2,90 +2,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dolma Rawat | Portfolio</title>
-  <link rel="stylesheet" href="site_style.css" />
-  
+  <title>Dolma Rawat | Portfolio </title>
+  <link rel="stylesheet" href="index.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </head>
-<body>
-  <header>
-    <h1>Dolma Rawat</h1>
-    <p>Bridging Data Science, Ethical AI, and Public Policy</p>
-    <div class="header-links">
-      <a href="mailto:dolma.rawat@cgu.edu">Email</a>
-      <a href="https://www.linkedin.com/in/your-profile">LinkedIn</a>
-      <a href="https://github.com/dolmarawat">GitHub</a>
-      <a href="DolmaRawat_AcademicCV.docx" download>Download CV</a>
-    </div>
-  </header>
+<body> 
+    <!-- replacing the navbar from html drectly-reusing the template -->
+    <div id="navbar-placeholder"></div>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p> I am a graduate student at Claremont Graduate University, specializing in Data Science and Analytics. My work lies at the intersection of machine learning, ethical AI, and public policy—driven by a background in development economics and global development practice. I am passionate about designing systems that are inclusive, context-aware, and grounded in real-world needs.
-     Over the past several years, I’ve worked with international development organizations, multilateral agencies, and nonprofits across domains such as gender equity, urban safety, youth leadership, entrepreneurship, and civic technology. These experiences exposed a recurring disconnect between social science research and the data infrastructure required for policy implementation—prompting my pivot toward data science as a bridge between insight and impact.
-     At CGU, a transdisciplinary graduate university, I’ve had the opportunity to explore this intersection in depth. Through coursework and research in machine learning, geospatial tools, and natural language processing, I’ve developed tools and frameworks for decision-making in domains ranging from healthcare forecasting to urban planning. <p>
-       
+    <script>
+    fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    </script>
+        <!-- footer  -->
+      <!-- Footer placeholder -->
+<div id="footer-placeholder"></div>
 
-      </p>My current research explores the ethical deployment of Generative AI in development contexts. While many organizations are racing to implement GenAI tools like chatbots, ethical oversight often remains an afterthought. I’m especially interested in building human-centered AI feedback systems that account for fairness, inclusion, and local relevance—integrating technical design with ethical impact assessments (EIA) and participatory principles.
-       Ultimately, my goal is to help shape AI-enabled systems that are not just powerful, but just—and to contribute to a future where technology is responsive to the communities it intends to serve. </p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills & Tools</h2>
-    <ul>
-      <li><strong>Programming:</strong> Python, R, STATA, SQL</li>
-      <li><strong>Visualization:</strong> Tableau, Excel, Python libraries(matplotlib, seaborn)</li>
-      <li><strong>ML Techniques:</strong> Decision Trees, Random Forest, XGBoost, Clustering, PCA</li>
-      <li><strong>AI Ethics:</strong> Ethical Impact Assessment and Evaluation, Prompt Engineering</li>
-      <li><strong>Other:</strong> Git, Jupyter, HTML, ArcGIS</li>
-    </ul>]
-  
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>BOMA Investments & World Merit:</strong> AI Agent Development + EIA Integration (June 2025 – Present)</li>
-      <li><strong>Quantum Analytics:</strong> Healthcare Risk Modeling Intern (Oct 2024 – Jan 2025)</li>
-      <li><strong>CGU Ethical AI Hackathon:</strong> Organizer & Workshop Leader (January- March 2025)</li>
-      <li><strong>IIT Delhi:</strong> Safe School Zone Policy Consultant (Dec 2023 – Feb 2024)</li>
-      <li><strong>UNESCO:</strong> Youth Policy & AI for Development (Feb 2023 – Aug 2023)</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Featured Projects</h2>
-    <ul>
-      <li><strong>Ethical AI Rubric:</strong> Built evaluation framework for responsible chatbot design.</li>
-      <li><strong>Healthcare Forecast Model:</strong> Predicted cost/risk using ensemble ML algorithms.</li>
-      <li><strong>Loan Default Predictor:</strong> Modeled education finance risk using interpretable classifiers.</li>
-    </ul>
-  </section>
-
-  <section id="publications">
-    <h2>Publications</h2>
-    <ul>
-      <li>NREGA: Historical Overview, Public Policy India (2021)</li>
-      <li>Tourism & Waste, Social Development for Communities Uttarakhand (2021)</li>
-      <li>National Food Security Act Review, Public Policy India (2022)</li>
-    </ul>
-  </section>
-
-  <section id="training">
-    <h2>Training & Certifications</h2>
-    <ul>
-      <li>GenAI in Evaluation – The Evaluators’ Institute, 2025</li>
-      <li>Gender Equality Marker – UN Women APAC, 2024</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:dolma.rawat@cgu.edu">dolma.rawat@cgu.edu</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/dolmarawat/">your-profile</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Dolma Rawat</p>
-  </footer>
+<!-- Load footer.html dynamically -->
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
 </body>
-</html>
+
