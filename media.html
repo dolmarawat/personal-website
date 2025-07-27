@@ -12,36 +12,48 @@
     <div id="navbar-placeholder"></div>
 
     <script>
-    fetch("navbar.html")
-        .then(response => response.text())
+      fetch("navbar.html")
+        .then(res => res.text())
         .then(data => {
-        document.getElementById("navbar-placeholder").innerHTML = data;
+          document.getElementById("navbar-placeholder").innerHTML = data;
+
+          // ✅ Manually add 'active' class to this page's link
+          const link = document.querySelector(".media-link");
+          if (link) {
+            link.classList.add("active2");
+          }
         });
+
     </script>
 
 <!-- media body -->
 
-<div class="container mt-5"><h3> Media</h3>
+<div class="container mt-5">
   <div class="row d-flex flex-row align-items-start">
-     <div class="image-card">
-      <img src="images/1745858921919.jpeg" alt="Dolma Rawat" class="img-fluid">
-    </div>
     
+        <ul style="background-color:rgba(235, 249, 249, 0.427); padding: 2.5rem;"> <strong> Links </strong> 
+          <li>
+          <a href="https://www.linkedin.com/posts/dolmarawat_ethicalai-humancentereddesign-policyandtechnology-activity-7322663047284621312-0KJE/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACqJm_wBzO8-3q3a3cPjDi7gZqSECNN7LL8">Ethical AI Hackathon</a>
+          </li>
+          <li>
+          <a href="https://www.linkedin.com/posts/center-for-information-systems-and-technology_studentspotlight-cgucisat-techforgood-ugcPost-7344063434868592640-sZU0?utm_source=share&utm_medium=member_desktop&rcm=ACoAACqJm_wBzO8-3q3a3cPjDi7gZqSECNN7LL8">Policy to AI</a>
+          </li>
+          <li>
+            <a href="https://theanalysis.org.in/merging-policy-with-precision-how-my-experience-shaped-my-passion-for-data-science/">Bridging Policy and Data Science</a>
+          </li>
+        </ul>
+    
+    <div class="image-card"> <p>Hackathon Presentation April 2025 </p>
+      <img src="images/1745858921919.jpeg" alt="Dolma Rawat" class="img-fluid"> 
+    </div>
      <div class="text-card">
       <div class="card">
         <div class="card-body">
          
-           <p class="card-text">Links
-            <ul> 
-              <li>
-              <a href="https://www.linkedin.com/posts/dolmarawat_ethicalai-humancentereddesign-policyandtechnology-activity-7322663047284621312-0KJE/?utm_source=share&utm_medium=member_desktop&rcm=ACoAACqJm_wBzO8-3q3a3cPjDi7gZqSECNN7LL8">Ethical AI Hackathon</a>
-              </li>
-              <li>
-              <a href="https://www.linkedin.com/posts/center-for-information-systems-and-technology_studentspotlight-cgucisat-techforgood-ugcPost-7344063434868592640-sZU0?utm_source=share&utm_medium=member_desktop&rcm=ACoAACqJm_wBzO8-3q3a3cPjDi7gZqSECNN7LL8">Policy to AI</a>
-              </li>
-            </ul>
-  
-          </p>
+    <div class="image-card"> <p>ESRI User Conference 2025 July 13-18</p>
+      <img src="images/UC Conference 3.jpg" alt="Dolma Rawat" class="img-fluid">
+    </div>
+    
         </div>
       </div>
     </div>

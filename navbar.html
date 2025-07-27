@@ -1,37 +1,40 @@
-<!-- Fixed and responsive header -->
-
+<!-- Style for active nav link -->
+<!-- Fixed responsive navbar -->
 <header class="bg-light-subtle shadow-sm" style="position: fixed; width: 100%; top: 0; z-index: 1030;">
-
   <div class="card-body text-center py-2">
     <h2 class="card-title mb-1" style="font-family: Georgia;">Dolma Rawat</h2>
-    <p style="font-size: 16px; font-family: Georgia;">Bridging Data Science, Ethical AI, and Public Policy</p>
+    <p style="font-size: 18px; font-family: Georgia;">
+      Bridging Data Science, Ethical AI, and Public Policy
+    </p>
   </div>
 
-  <nav class="navbar navbar-expand-lg bg-light-subtle border-0 py-2" style="font-family: Georgia;">
+  <nav class="navbar navbar-expand-lg border-0 py-2" style="font-family: Georgia;">
     <div class="container">
 
       <!-- Mobile toggle button -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Navbar content -->
+      <!-- Nav links -->
       <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+        
         <ul class="navbar-nav">
           <li class="nav-item mx-2">
-            <a class="nav-link" href="index.html">About</a>
+            <a class="nav-link index-link" href="index.html">About</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="cv.html">CV</a>
+            <a class="nav-link cv-link" href="cv.html">CV</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="research.html">Research</a>
+            <a class="nav-link research-link" href="research.html">Research</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="media.html">Media</a>
+            <a class="nav-link media-link" href="media.html">Media</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="testimonial.html">Testimonials</a>
+            <a class="nav-link testimonial-link" href="testimonial.html">Testimonials</a>
           </li>
         </ul>
       </div>
@@ -40,12 +43,3 @@
   </nav>
 </header>
 
-<script>
-  const currentPage = window.location.pathname.split("/").pop();
-  document.querySelectorAll('.nav-link').forEach(link => {
-    const linkPage = link.getAttribute('href');
-    if (linkPage === currentPage) {
-      link.classList.add('active-page');
-    }
-  });
-</script>

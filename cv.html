@@ -23,11 +23,19 @@
 
     <script>
     fetch("navbar.html")
-        .then(response => response.text())
-        .then(data => {
-        document.getElementById("navbar-placeholder").innerHTML = data;
-        });
-    </script>
+  
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+
+      // ✅ Manually add 'active' class to this page's link
+      const link = document.querySelector(".cv-link");
+      if (link) {
+        link.classList.add("active2");
+      }
+    });
+</script>
+
 
         <!-- footer  -->
       <div id="footer-placeholder"></div>

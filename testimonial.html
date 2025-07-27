@@ -13,17 +13,42 @@
 
     <script>
     fetch("navbar.html")
-        .then(response => response.text())
-        .then(data => {
+      .then(res => res.text())
+      .then(data => {
         document.getElementById("navbar-placeholder").innerHTML = data;
-        });
-    </script>
+
+        // ✅ Manually add 'active' class to this page's link
+        const link = document.querySelector(".testimonial-link");
+        if (link) {
+          link.classList.add("active2");
+        }
+      });
+</script>
+
 
     
-<div class="container mt-5">
-  <h3>Coming Soon ....</h3>
-</div>
+<!-- body -->
+ <div class="container">
+  <div class="row d-flex flex-row align-items-start">
+    
+    <!-- Image Column (30%) -->
+    <div class="image-card">
+      <img src="images/ShaminiDias.jpg" alt="Shamini Dias" class="img-fluid"><hr>
+       <strong>Shamini Dias. Director. Transdisciplinary Studies Program. Claremont Graduate University.</strong>
+    </div>
 
+    <!-- Text Column (70%) -->
+    <div class="text-card text-center">
+      <div class="card">
+        <div class="card-body">
+           <p class="card-text" >
+            "Dolma and I worked together on the Transdisciplinary Ethical AI Hackathon in April 2025. Dolma brought a clear and robust Ethical Impact Assessment framework, ethical principles, and an understanding of policy development to the process that were invaluable in shaping the unique nature of this Hackathon. <br><br>As part of a team bringing diverse perspectives together, she balanced offering her perspectives and knowledge of Ethical Impact Assessment with integrating other perspectives in ways that enhanced the collaboration process and the final design of the Hackathon."
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
         <!-- footer  -->

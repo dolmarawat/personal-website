@@ -8,15 +8,21 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="navbar-placeholder"></div>
 
-    <script>
-    fetch("navbar.html")
-        .then(response => response.text())
+<div id="navbar-placeholder"></div>
+ <script>
+      fetch("navbar.html")
+        .then(res => res.text())
         .then(data => {
-        document.getElementById("navbar-placeholder").innerHTML = data;
+          document.getElementById("navbar-placeholder").innerHTML = data;
+
+          // ✅ Manually add 'active' class to this page's link
+          const link = document.querySelector(".index-link");
+          if (link) {
+            link.classList.add("active2");
+          }
         });
-    </script>
+</script>
 
 <div class="container mt-5">
   <div class="row d-flex flex-row align-items-start">
